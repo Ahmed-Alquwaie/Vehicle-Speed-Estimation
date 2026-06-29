@@ -8,7 +8,7 @@
 An interactive Computer Vision application for estimating vehicle speed from traffic videos using **YOLOv8**, **OpenCV**, and **PyTorch**.
 
 <p align="center">
-  <img src="assets/demo.gif" alt="Vehicle Speed Estimation Demo" width="900">
+  <img src="assets/vehicle_speed_estimation_demo.gif" alt="Vehicle Speed Estimation Demo" width="900">
 </p>
 
 ---
