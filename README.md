@@ -276,7 +276,7 @@ The four corner points define the road region used during the calibration proces
 ## Distance Calibration
 
 <p align="center">
-  <img src="assets/4_distance_calibration_window.png" width="900">
+  <img src="assets/4_distance calibration window.png" width="900">
 </p>
 
 Two points with a known real-world distance are selected.
