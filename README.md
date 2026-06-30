@@ -5,7 +5,7 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-CUDA-orange.svg)
 
-An interactive Computer Vision application for estimating vehicle speed from traffic videos using **YOLOv8**, **OpenCV**, and **PyTorch**.
+An interactive Computer Vision application for estimating vehicle speed from traffic videos using **YOLOv8** and **OpenCV**
 
 <p align="center">
   <img src="assets/vehicle_speed_estimation_demo.gif" alt="Vehicle Speed Estimation Demo" width="900">
