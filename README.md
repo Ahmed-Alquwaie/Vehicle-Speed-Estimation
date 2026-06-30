@@ -5,7 +5,7 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-CUDA-orange.svg)
 
-An interactive Computer Vision application for estimating vehicle speed from traffic videos using **YOLOv8** and **OpenCV**
+An interactive Computer Vision application for estimating vehicle speed from traffic videos using **YOLOv8** and **OpenCV**.
 
 <p align="center">
   <img src="assets/vehicle_speed_estimation_demo.gif" alt="Vehicle Speed Estimation Demo" width="900">
@@ -18,15 +18,15 @@ An interactive Computer Vision application for estimating vehicle speed from tra
 * [Project Overview](#-project-overview)
 * [Demo](#-demo)
 * [Features](#-features)
-* [Installation](#-installation)
+* [Installation](#%EF%B8%8F-installation)
 * [Running the Project](#-running-the-project)
 * [Methodology](#-methodology)
 * [Calibration Guide](#-calibration-guide)
 * [Calibration Assumptions](#-calibration-assumptions)
 * [Screenshots](#-screenshots)
 * [Project Structure](#-project-structure)
-* [Technologies Used](#-technologies-used)
-* [Limitations](#-limitations)
+* [Technologies Used](#%EF%B8%8F-technologies-used)
+* [Limitations](#%EF%B8%8F-limitations)
 * [Future Improvements](#-future-improvements)
 * [Author](#-author)
 
@@ -40,7 +40,7 @@ Instead of relying on hardcoded calibration values, the application provides an 
 
 The project was developed to demonstrate practical Computer Vision techniques for vehicle speed estimation through an interactive and user-friendly workflow, while aiming to provide reliable speed estimates under real-world conditions.
 
-The application combines:
+The application combines the following technologies:
 
 * YOLOv8 for vehicle detection.
 * OpenCV for video processing and visualization.
@@ -50,7 +50,7 @@ The application combines:
 
 # 🎥 Demo
 
-A demonstration video is included in:
+A full demonstration video is also available in:
 
 ```text
 assets/0_vehicle_speed_estimation_demo.mp4
@@ -70,7 +70,7 @@ The repository also contains sample traffic videos inside the **videos/** direct
 * Vehicle tracking.
 * Vehicle speed estimation.
 * Automatic calibration saving.
-* Automatic processed video generation.
+* Automatic saving of the processed video.
 * Configuration storage using JSON.
 * Easy-to-use workflow.
 * GPU acceleration through CUDA-enabled PyTorch (optional).
@@ -81,11 +81,19 @@ The repository also contains sample traffic videos inside the **videos/** direct
 
 ## 1. Clone the repository
 
+If Git is not installed on your system, you can either:
+
+- Install Git from https://git-scm.com/downloads
+- Or download the repository as a ZIP file using **Code → Download ZIP**.
+
+Then clone the repository:
+
 ```bash
 git clone https://github.com/Ahmed-Alquwaie/Vehicle-Speed-Estimation.git
 
 cd Vehicle-Speed-Estimation
 ```
+> **Important:** Make sure all subsequent commands are executed from inside the project directory.
 
 ---
 
@@ -105,6 +113,14 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+> **If you're using Windows PowerShell and the activation command doesn't work, try:**
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+> **If activation is successful, your terminal prompt should begin with `(venv)`.**
+
 ### Linux / macOS
 
 ```bash
@@ -121,7 +137,9 @@ pip install -r requirements.txt
 
 ---
 
-## 5. Install CUDA-enabled PyTorch (Recommended)
+## 5. (Optional) Install CUDA-enabled PyTorch (NVIDIA GPU only)
+
+> This step is only required if you want to use an NVIDIA GPU for faster live processing. The project also runs correctly on the CPU, but live processing will be slower. The saved output video is not affected by the processing device.
 
 For NVIDIA GPUs:
 
@@ -129,11 +147,9 @@ For NVIDIA GPUs:
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
-> Although the project was developed using CUDA-enabled PyTorch, it can also run on the CPU if CUDA is unavailable. However, GPU acceleration is strongly recommended for significantly faster inference.
-
 ---
 
-## 6. Verify GPU Support (Optional)
+## 6. (Optional) Verify GPU Support
 
 ```python
 import torch
@@ -182,6 +198,8 @@ The speed estimation pipeline follows these steps:
 8. Convert displacement into real-world distance.
 9. Estimate vehicle speed.
 10. Display the estimated speed and save the processed output video automatically.
+
+**The following diagram illustrates the overall processing pipeline:**
 
                                     Video
                                       ↓
@@ -337,7 +355,7 @@ Vehicle-Speed-Estimation/
 │   └── calibration.json
 │
 ├── models/
-|   ├── yolov8s.pt
+│   ├── yolov8s.pt
 │   └── yolov8n.pt
 │
 ├── outputs/
