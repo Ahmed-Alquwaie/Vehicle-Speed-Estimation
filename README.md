@@ -53,7 +53,7 @@ The application combines:
 A demonstration video is included in:
 
 ```text
-assets/demo.mp4
+assets/0_vehicle_speed_estimation_demo.mp4
 ```
 
 The repository also contains sample traffic videos inside the **videos/** directory, allowing users to test the application immediately after installation.
