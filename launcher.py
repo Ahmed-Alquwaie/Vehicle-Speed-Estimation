@@ -128,7 +128,7 @@ def run_speed_estimation():
 
     app.withdraw()
 
-    subprocess.run([sys.executable, "Speed Estimation.py"])
+    subprocess.run([sys.executable, "speed_estimation.py"])
 
     app.deiconify()
 # ==========================
